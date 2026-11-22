@@ -1,0 +1,25 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  author: MyString
+  cover_url: MyString
+  grid: one
+  position: 1
+  actual_page: 1
+  total_pages: 1
+  started_at: 2026-11-20 16:24:45
+  finished_at: 2026-11-20 16:24:45
+  rate: 1
+
+two:
+  title: MyString
+  author: MyString
+  cover_url: MyString
+  grid: two
+  position: 1
+  actual_page: 1
+  total_pages: 1
+  started_at: 2026-11-20 16:24:45
+  finished_at: 2026-11-20 16:24:45
+  rate: 1
