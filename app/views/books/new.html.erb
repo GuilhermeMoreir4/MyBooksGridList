@@ -1,0 +1,65 @@
+<h1> Book </h1>
+
+
+<%= form_with model: @book do |form| %>
+
+    <div>
+        <%= form.label :title%>
+        <%= form.text_field :title%>
+    </div>
+
+    <div>
+        <%= form.label :author%>
+        <%= form.text_field :author%>
+    </div>
+
+    <div>
+        <%= form.label :grid_id, "Grid"%>
+        <%= form.collection_select :grid_id, Grid.all, :id, :name, 
+            { include_bank: "Selecione um Grid" }
+        %>
+    </div>
+    
+    <div>
+        <%= form.label :cover_url%>
+        <%= form.text_field :cover_url%>
+    </div>
+
+    <div>
+        <%= form.label :position%>
+        <%= form.number_field :position
+        %>
+    </div>
+
+    <div>
+        <%= form.label :current_page%>
+        <%= form.number_field :current_page%>
+    </div>
+
+    <div>
+        <%= form.label :total_pages%>
+        <%= form.number_field :total_pages%>
+    </div>
+
+    <div>
+        <%= form.label :started_at%>
+        <%= form.date_field :started_at%>
+    </div>
+
+    <div>
+        <%= form.label :finished_at%>
+        <%= form.date_field :finished_at%>
+    </div>
+
+    <div>
+        <%= form.label :rating%>
+        <%= form.range_field :rating, in: 0..10 %>
+    </div>
+
+    <div>
+        <%= form.submit %>
+    </div>
+
+<%end%>
+
+<%= link_to "Cancel", books_path %>
